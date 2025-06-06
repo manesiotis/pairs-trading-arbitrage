@@ -24,7 +24,7 @@ This project uses **linear regression** to find the hedge ratio, calculates the 
 ## 📁 Project structure
 ```
 pairs-trading/
-├── pairs_trading_ko_pep.py      # Main script with all calculations and plots
+├── pairs_trading.py      # Main script with all calculations and plots
 ├── plots/
 │   ├── cumulative_returns.png   # Cumulative returns of the strategy
 │   ├── spread.png               # Spread between KO and PEP
