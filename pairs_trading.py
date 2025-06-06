@@ -32,19 +32,19 @@ zscore = (spread - spread.mean()) / spread.std()
 
 plt.figure(figsize=(12, 6))
 plt.plot(spread, label='Spread')
-plt.savefig("plots/spread_chart.png")
 plt.axhline(spread.mean(), color='black', linestyle='--')
 plt.title("Spread between KO and PEP")
 plt.legend()
+plt.savefig("plots/spread_chart.png")
 plt.show()
 
 plt.figure(figsize=(12, 4))
 plt.plot(zscore, label='Z-score')
-plt.savefig("plots/zscore_chart.png")
 plt.axhline(1, color='red', linestyle='--')
 plt.axhline(-1, color='green', linestyle='--')
 plt.title("Z-score of the Spread")
 plt.legend()
+plt.savefig("plots/zscore_chart.png")
 plt.show()
 
 #trading signals
@@ -65,6 +65,7 @@ plt.figure(figsize=(12, 5))
 plt.plot(cumulative_returns, label='Strategy')
 plt.title("Cumulative Returns")
 plt.legend()
+plt.savefig("plots/cumulative_returns_chart.png")
 plt.show()
 
 
