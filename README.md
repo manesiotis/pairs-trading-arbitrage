@@ -12,7 +12,7 @@ Pairs trading is a **market-neutral strategy** that involves:
 - Profiting when the spread reverts to the mean.
 
 This project uses **linear regression** to find the hedge ratio, calculates the spread and its z-score, and plots key indicators to analyze trading opportunities.
-
+ 
 ## 📊 What the script does
 
 - Downloads historical price data for KO and PEP from Yahoo Finance.
@@ -21,6 +21,7 @@ This project uses **linear regression** to find the hedge ratio, calculates the 
 - Visualizes the cumulative returns, spread, and z-score.
 - Lays the groundwork for a simple rule-based trading strategy (e.g., enter when z-score > 2 or < -2).
 
+## 📁 Project structure
 ```
 pairs-trading/
 ├── pairs_trading_ko_pep.py      # Main script with all calculations and plots
