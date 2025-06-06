@@ -18,7 +18,7 @@ This project uses **linear regression** to find the hedge ratio, calculates the 
 - Downloads historical price data for KO and PEP from Yahoo Finance.
 - Tests for **cointegration** between the two stocks.
 - Calculates the **spread** and **z-score** of the relationship.
-- Visualizes the price series, spread, and z-score.
+- Visualizes the cumulative returns, spread, and z-score.
 - Lays the groundwork for a simple rule-based trading strategy (e.g., enter when z-score > 2 or < -2).
 
 ## 📁 Project structure
