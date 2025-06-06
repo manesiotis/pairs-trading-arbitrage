@@ -1,0 +1,1 @@
+plt.savefig("plots/zscore_chart.png")
