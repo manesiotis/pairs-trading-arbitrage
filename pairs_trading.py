@@ -8,14 +8,17 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
+import os
+
+os.makedirs("plots", exist_ok=True)
 
 #data
 
 start = "2020-01-01"
 end = "2024-12-31"
-stock1 = yf.download("KO", start=start, end=end)['Adj Close']
-stock2 = yf.download("PEP", start=start, end=end)['Adj Close']
-data = pd.DataFrame({'KO': stock1, 'PEP': stock2}).dropna()
+data = yf.download(['KO', 'PEP'], start=start, end=end, auto_adjust=False)['Adj Close']
+data = data[['KO', 'PEP']].dropna()
+
 
 #cointegration
 
@@ -24,7 +27,7 @@ print(f"Cointegration p-value: {pvalue:.4f}")
 
 #spread & Z-score
 
-hedge_ratio = sm.OLS(data['KO'], sm.add_constant(data['PEP'])).fit().params[1]
+hedge_ratio = sm.OLS(data['KO'], sm.add_constant(data['PEP'])).fit().params['PEP']
 spread = data['KO'] - hedge_ratio * data['PEP']
 zscore = (spread - spread.mean()) / spread.std()
 
