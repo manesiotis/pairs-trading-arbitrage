@@ -21,16 +21,17 @@ This project uses **linear regression** to find the hedge ratio, calculates the 
 - Visualizes the cumulative returns, spread, and z-score.
 - Lays the groundwork for a simple rule-based trading strategy (e.g., enter when z-score > 2 or < -2).
 
-## 📁 Project structure
-
+```
 pairs-trading/
-├── pairs_trading.py # Main script with all calculations and plots
+├── pairs_trading_ko_pep.py      # Main script with all calculations and plots
 ├── plots/
-│ ├── cumulative_returns.png # KO vs PEP prices
-│ ├── spread.png # Spread between KO and PEP
-│ └── zscore.png # Z-score of the spread
-├── requirements.txt # Python dependencies
-└── README.md # Project explanation and guide
+│   ├── cumulative_returns.png   # Cumulative returns of the strategy
+│   ├── spread.png               # Spread between KO and PEP
+│   └── zscore.png               # Z-score of the spread
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project explanation and guide
+```
+
 
 ## ⚙️ How to run
 
